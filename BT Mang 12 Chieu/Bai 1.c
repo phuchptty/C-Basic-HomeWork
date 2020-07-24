@@ -11,7 +11,7 @@ void nhapmang(int a[], int n) {
 
 void xuatMang(int a[], int n) {
     for (int i = 0; i < n; i++) {
-        printf("%d | ", i, a[i]);
+        printf("%d | ", a[i]);
     }
 }
 
