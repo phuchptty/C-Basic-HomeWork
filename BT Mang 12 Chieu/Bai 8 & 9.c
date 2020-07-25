@@ -47,16 +47,6 @@ void TangTheoHang(int b[][100], int m, int n) {
 	TangTheoCot(b,m,n);
 }
 
-/*void SapXepThuong(int a[][100], int m, int n)
-{
-	int B[100];
-	int p;
-	int ChuyenMang(a,m,n,B,p);
-	int SapXep1Chieu(B,p);
-	for (int i = 0; i < m; i++)
-		for (int j = 0; j < n; j++)
-			a[i][j] = B[i*n+j];
-}*/
 int main() {
 
     int a[100][100];
@@ -80,7 +70,6 @@ int main() {
     XuatMaTran(a, m, n);
 
     printf("Ma tran sau khi sap xep tang theo cot:\n");
-    //SapXepThuong(a,m,n);
     XuatMaTran(a, m, n);
     return 0;
 }
