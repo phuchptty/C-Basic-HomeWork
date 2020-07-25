@@ -56,7 +56,7 @@ void tbcSoAm(int a[], int n) {
     printf("Trung binh cong so am: %d/%d ~ %d", sum, count, sum/count);
 }
 
-void main() {
+int main() {
 
     int a[100];
     int n;

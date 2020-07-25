@@ -52,7 +52,7 @@ void SCPMin(int a[], int n) {
     printf("%d \n", min);
 }
 
-void main() {
+int main() {
     int a[100];
     int n;
 
