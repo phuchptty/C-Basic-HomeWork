@@ -26,36 +26,31 @@ void main() {
     printf("Mang truoc khi sap xep: ");
     xuatMang(a, n);
     printf("\n");
-    
+
     int pos = 0;
+    int b[100];
 
     for (int i = 0; i < n; i++) {
         if (a[i] < 0) {
-            int oVal = a[pos];
-            a[pos] = a[i];
-            a[i] = oVal;
+            b[pos] = a[i];
             pos++;
         }
     }
 
     for (int i = 0; i < n; i++) {
         if (a[i] == 0) {
-            int oVal = a[pos];
-            a[pos] = a[i];
-            a[i] = oVal;
+            b[pos] = a[i];
             pos++;
         }
     }
 
     for (int i = 0; i < n; i++) {
         if (a[i] > 0) {
-            int oVal = a[pos];
-            a[pos] = a[i];
-            a[i] = oVal;
+            b[pos] = a[i];
             pos++;
         }
     }
 
     printf("Mang sau khi sap xep: ");
-    xuatMang(a, n);
+    xuatMang(b, n);
 }
