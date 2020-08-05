@@ -61,7 +61,7 @@ void SapXepSV(struct SinhVien SV[], int n) {
         }
     }
 
-    printf("\n\n\tSau Khi Sap Xep Sinh Vien Theo Ma:\n\n");
+    printf("\n\n\tSau Khi Sap Xep Sinh Vien Theo Diem:\n\n");
 
     for (int i = 0; i < n; i++) {
         printf("Sinh Vien %d \n", i + 1);

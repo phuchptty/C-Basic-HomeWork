@@ -176,7 +176,9 @@ void hienThiMenu() {
     printf("\t4. Xoa mot sinh vien\n");
     printf("\t5. Sua mot sinh vien\n");
     printf("\t6. Sap xep theo ten giam dan\n");
-    printf("\t7. Ket thuc\n");
+    printf("\t7. Sinh vien co diem trung binh >= 7\n");
+    printf("\t8. Tim kiem theo ma sinh vien\n");
+    printf("\t9. Ket thuc\n");
     printf("\t\tVui long chon: ");
 }
 
@@ -191,6 +193,20 @@ void taoDanhSachSinhVien() {
         if (c == 'n' || c == 'N')
             break;
     }
+}
+
+void sinhVienDTBP7(){
+    printf("\t\tDANH SACH\n");
+    printf("\t%4s|%-20s|%5s|%6s|\n", "STT", "Ho ten", "Tuoi", "DiemTB");
+
+    int i;
+    node *tmp;
+    for (tmp = list, i = 1; tmp != NULL; tmp = tmp->tiep){
+        if (tmp -> du_lieu.diem_TB >= 7){
+            printf("\t%4d|%-20s|%5d|%6.2f|\n", i++, tmp->du_lieu.ho_ten, tmp->du_lieu.tuoi, tmp->du_lieu.diem_TB);
+        }
+    }
+        
 }
 
 int main() {
@@ -271,6 +287,13 @@ int main() {
             getch();
             break;
         case 7:
+            system("cls");
+            printf("\tSinh vien diem trung binh >= 7\n");
+            sinhVienDTBP7();
+            printf("\tBam phim bat ky de ve menu");
+            getch();
+            break;
+        case 9:
             system("cls");
             printf("\tBan da chon thoat khoi chuong trinh! Bye~");
             getch();
