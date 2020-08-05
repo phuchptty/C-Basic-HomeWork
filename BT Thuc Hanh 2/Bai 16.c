@@ -149,17 +149,13 @@ void xoaDanhSach() {
     }
 }
 
-void sapXepSinhVienTheoTen(int tangDan) {
+void sapXepSinhVienTheoTen() {
     if (list == NULL || list->tiep == NULL) {
         return;
     }
     for (node *i = list; i->tiep != NULL; i = i->tiep) {
         for (node *j = i->tiep; j != NULL; j = j->tiep) {
-            if (tangDan == 1 && strcmp(i->du_lieu.ho_ten, j->du_lieu.ho_ten) == 1) {
-                SinhVien tmp = i->du_lieu;
-                i->du_lieu = j->du_lieu;
-                j->du_lieu = tmp;
-            } else if (tangDan == 0 && strcmp(i->du_lieu.ho_ten, j->du_lieu.ho_ten) == -1) {
+            if (strcmp(i->du_lieu.ho_ten, j->du_lieu.ho_ten) == -1) {
                 SinhVien tmp = i->du_lieu;
                 i->du_lieu = j->du_lieu;
                 j->du_lieu = tmp;
@@ -282,7 +278,7 @@ int main() {
         case 6:
             system("cls");
             printf("\tBan da chon sap xep danh sach giam dan theo ten\n");
-            sapXepSinhVienTheoTen(0);
+            sapXepSinhVienTheoTen();
             printf("\tBam phim bat ky de ve menu");
             getch();
             break;
