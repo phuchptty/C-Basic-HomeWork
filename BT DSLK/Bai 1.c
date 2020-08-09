@@ -130,6 +130,36 @@ void sortAscAverPoint(List *list) {
     }
 }
 
+// Step 7: Listed average pass 5
+
+void listedAverP5(List *list) {
+    Node *i;
+
+    printf("\n\n\t\tDANH SACH SV DTB >= 5\n");
+    printf("\t%5s | %-20s | %12s | %6s |\n", "Ma SV", "Ho ten", "Gioi Tinh", "DiemTB");
+
+    for (i = list -> head; i != NULL; i = i -> next){
+        if (i -> data.dtb >= 5){
+            printf("\t %5d | %-20s | %12s | %6.2f |\n", i->data.maSV, i->data.hoTen, i->data.gioiTinh, i->data.dtb);
+        }
+    }
+}
+
+//Step 8: Count Male Student
+
+void countMale(List *list){
+    Node *i;
+    int count =0;
+
+    for (i = list -> head; i != NULL; i = i -> next){
+        if (strcmp(i -> data.gioiTinh, "nam") == 0){
+            count++;
+        }
+    }
+
+    printf("\n\n\t\tCO %d NAM", count);
+}
+
 void main() {
     List list;
     SinhVien SV;
@@ -140,4 +170,10 @@ void main() {
     sortAscAverPoint(&list);
     printf("\n\n\t\tDANH SACH SAU KHI SAP XEP: ");
     outputData(&list);
+
+    listedAverP5(&list);
+
+    countMale(&list);
+
+    getch();
 }
