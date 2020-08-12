@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <conio.h>
 
 typedef struct KhoiA {
     float toan;
@@ -67,27 +68,33 @@ void main() {
         }
     }
 
+    printf("\n\t<!-------- DANG HOANG PHUC ------------>\n");
     printf("\n\n\t\tDANH SACH THI SINH THI KHOI A\n\n");
 
     for (int i = 0; i < n; i++) {
         if (strcmp(TS[i].kt, "A") == 0 || strcmp(TS[i].kt, "a") == 0){
-            printf("Ho Ten: %s\n", TS[i].hoTen);
-            printf("Khoi Thi: %s\n", TS[i].kt);
-            printf("Diem Toan: %0.2f\n", TS[i].khoiThi.a.toan);
-            printf("Diem Ly: %0.2f\n", TS[i].khoiThi.a.ly);
-            printf("Diem Hoa: %0.2f\n", TS[i].khoiThi.a.hoa);
+            printf("\tHo Ten: %s\n", TS[i].hoTen);
+            printf("\tKhoi Thi: %s\n", TS[i].kt);
+            printf("\tDiem Toan: %0.2f\n", TS[i].khoiThi.a.toan);
+            printf("\tDiem Ly: %0.2f\n", TS[i].khoiThi.a.ly);
+            printf("\tDiem Hoa: %0.2f\n", TS[i].khoiThi.a.hoa);
+            printf("\n");
         }
     }
 
-    printf("\n\n\t\tDANH SACH THI SINH THI KHOI C\n\n");
+    printf("\n\t<!-------- DANG HOANG PHUC ------------>\n");
+    printf("\n\t\tDANH SACH THI SINH THI KHOI C\n\n");
 
     for (int i = 0; i < n; i++) {
         if (strcmp(TS[i].kt, "C") == 0 || strcmp(TS[i].kt, "c") == 0){
-            printf("Ho Ten: %s\n", TS[i].hoTen);
-            printf("Khoi Thi: %s\n", TS[i].kt);
-            printf("Diem Van: %0.2f\n", TS[i].khoiThi.c.van);
-            printf("Diem Su: %0.2f\n", TS[i].khoiThi.c.su);
-            printf("Diem Dia: %0.2f\n", TS[i].khoiThi.c.dia);
+            printf("\tHo Ten: %s\n", TS[i].hoTen);
+            printf("\tKhoi Thi: %s\n", TS[i].kt);
+            printf("\tDiem Van: %0.2f\n", TS[i].khoiThi.c.van);
+            printf("\tDiem Su: %0.2f\n", TS[i].khoiThi.c.su);
+            printf("\tDiem Dia: %0.2f\n", TS[i].khoiThi.c.dia);
+            printf("\n");
         }
     }
+
+    getch();
 }
