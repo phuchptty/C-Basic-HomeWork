@@ -62,7 +62,7 @@ void sortMatrixDesc(int matrix[][10], int row, int col) {
 
 void main() {
 
-    FILE *f = fopen("matran.txt", "a+");
+    FILE *f = fopen("matran.txt", "r");
 
     if (f == NULL) {
         printf("File Error");
