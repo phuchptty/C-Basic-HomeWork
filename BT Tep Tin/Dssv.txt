@@ -1,0 +1,8 @@
+Hoten, gioitinh, diemtb
+Tung, nam, 8
+Hieu, nam, 9
+Mai, nu, 4
+SAU KHI SAP XEP
+Mai ,nu ,4.00
+Tung ,nam ,8.00
+Hieu ,nam ,9.00

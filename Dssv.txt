@@ -1,3 +1,4 @@
+Hoten, gioitinh, diemtb
 Tung, nam, 8
-Hieu, nam, 9
+Hiếu, nam, 9
 Mai, nu, 4
